@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Jorge</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <!-- <script src="https://unpkg.com/vue@next"></script> -->
+</head>
+
+<body>
+    <div id="app">
+        <header class="main-header">
+            <a href="#">
+                
+                <h1 class="main-header__title title">
+                    Pizzería
+                </h1>
+            </a>
+        </header>
+        <main class="main-content">
+            <table class="seccion precios">
+
+                <tr>
+                    <th colspan="2">Tarifa de precios</th>
+                </tr>
+                
+                <tr>
+                    <td>
+                        Jamón y queso
+                    </td>
+                    <td>
+                        4 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mozarella
+                    </td>
+                    <td>
+                        3 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Morrones
+                    </td>
+                    <td>
+                        2 €
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td colspan="2">
+                        Los precios son revisados una vez por semana
+                    </td>
+                </tr>
+
+            </table>
+            <div class="section tarifa">
+                <div class="calcular">
+                    <ul role="list" class="campos">
+                        <li class="campo">
+                            <label for="listado-pizzas">Pizzas (001)</label>
+                           
+                            <select name="pizzas" id="listado-pizzas">
+                                <option value="0001">Jamón y queso</option>
+                                <option value="0002">Mozarella</option>
+                                <option value="0003">Morrones</option>
+                            </select>
+                        </li>
+                        <li class="campo">
+                            <label for="precio">Precio pizza</label>
+                            <!-- propiedad precioUnitario -->
+                            <input type="text" id="precio" disabled>
+                        </li>
+                    </ul>
+                   
+                    <!-- COMIENZA FORMULARIO -->
+                    <form action="#">
+                        <ul role="list" class="campos">
+                            <li class="campo">
+                                <strong>Total</strong>
+                                <!-- la propiedad "total" va aquí -->
+                                <span class="total">0</span>
+                                <div role="alert">No se ha seleccionado producto</div>
+                            </li>
+                            <li class="campo botones">
+                                <button id="mas">Añadir +</button>
+                                <button id="menos">Quitar -</button>
+                            </li>
+
+                        </ul>
+                    </form><!-- FIN DE FORMULARIO -->
+                    
+                </div>
+                <figure class="tarifa__imagen">
+                    <img src="src/images/jamonqueso.jpg" alt="Jamón y queso">
+                    <figcaption>Jamón y queso</figcaption>
+                </figure>
+            </div>
+        </main>
+        <footer class="main-footer">
+            @webferrol
+        </footer>
+
+    </div>
+    <script src="src/main.js"></script>
+</body>
+
+</html>
